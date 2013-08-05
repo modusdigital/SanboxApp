@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+	<title>UEL APP</title>
+	<script src="lib/source-sans-pro.js"></script>
+	<link href="themes/default/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- register -->
+<script id="register-tpl" type="text/x-handlebars-template">
+
+	<div class="loginWrap">
+	<div class="logo"></div>
+	<div class="form">
+		
+		<div class="input-prepend">
+			<span class="add-on icon-envelope"></span>
+			<input type="text" id="email" name="email" value="" placeholder="Email"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-key"></span>
+			<input type="password" id="pass" name="pass" value="" placeholder="Password"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-map-marker"></span>
+			<input type="text" id="location" name="location" value="" placeholder="Location"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-linkedin"></span>
+			<input type="text" id="linkedin" name="linkedin" value="" placeholder="LinkedIn"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-twitter"></span>
+			<input type="text" id="twitter" name="twitter" value="" placeholder="Twitter"/>
+		</div>
+		
+		<label class="checkbox">
+    	<input type="checkbox" id="private" name="private" value="1"> Keep Private?
+		</label>
+		
+		<button class="submitForm btn btn-width" id="sendReg">Register</button><br />
+		<a href="#" class="register">Login</a>
+		
+	</div>
+	</div>
+</script>
+
+<!-- profile update -->
+<script id="profile-tpl" type="text/x-handlebars-template">
+	<div class="header">
+		<a href="#" class="btn pull-left"><i class="icon-backward"></i></a>
+    <div class="title">
+    	<h1>Profile</h1>
+    </div>
+    <!--<a href="/" class="btn pull-right"><i class="icon-home"></i></a>-->
+	</div>
+	
+	<div class="text">
+		<div class="input-prepend">
+			<span class="add-on icon-envelope"></span>
+			<input type="text" id="email" name="email" value="{{this.email}}" value="" placeholder="Email"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-key"></span>
+			<input type="password" id="pass" name="pass" value="{{this.password}}" value="" placeholder="Password"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-map-marker"></span>
+			<input type="text" id="location" name="location" value="{{this.location}}" value="" placeholder="Location"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-linkedin"></span>
+			<input type="text" id="linkedin" name="linkedin" value="{{this.linkedin}}" value="" placeholder="LinkedIn"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-twitter"></span>
+			<input type="text" id="twitter" name="twitter" value="{{this.twitter}}" value="" placeholder="Twitter"/>
+		</div>
+		
+		<label class="checkbox">
+    	<input type="checkbox" id="private" name="private" value="1"{{#if this.PrivateProfile}} checked="yes"{{/if}}> Keep Private?
+		</label>
+		
+		<button class="submitForm btn btn-width" id="updtProfile">Update</button>
+	</div>
+</script>
+
+<!-- login -->
+<script id="login-tpl" type="text/x-handlebars-template">
+	<div class="loginWrap">
+	<div class="logo"></div>
+	<div class="form">
+		<div class="input-prepend">
+			<span class="add-on icon-envelope"></span>
+			<input class="" type="text" id="emailLogin" name="emailLogin" value="" placeholder="Email"/>
+		</div>
+		
+		<div class="input-prepend">
+			<span class="add-on icon-key"></span>
+			<input type="password" id="passLogin" name="passLogin" value="" placeholder="Password" />
+		</div>
+		
+		<button class="submitForm btn btn-width" id="sendLogin"><i class="icon-lock"></i> Login</button>
+		
+		<br/>
+		<a href="#register" class="register">Register</a>
+		
+	</div>
+	</div>
+</script>
+
+<!-- menu -->
+<!--<script id="menu-tpl" type="text/x-handlebars-template">
+</script>-->
+
+<!-- main page with menu and content -->
+<script id="main-page-tpl" type="text/x-handlebars-template">
+	<div class="menu-list">
+		<div class="menu-scroll">
+			<ul class="menu">
+				<li><a href="#profile" class="profile"><i class="icon-user icon-2x"></i></a></li>
+				<li><a href="#" onclick="window.open('https://www.facebook.com/pages/Modus-Creative/113961365296097', '_system');" class="facebook"><i class="icon-facebook icon-2x"></i></a></li>
+				<li><a href="#" onclick="window.open('https://twitter.com/Modusman', '_system');" class="twitter"><i class="icon-twitter icon-2x"></i></a></li>
+				<li><a href="#" onclick="window.open('http://www.youtube.com/watch?v=Lwm6E9lgwNU', '_system');" class="youtube"><i class="icon-youtube icon-2x"></i></a></li>
+				<li><a href="#links" class="links"><i class="icon-globe icon-2x"></i></a></li>
+				<li><a href="#locations" class="locations"><i class="icon-map-marker icon-2x"></i></a></li>
+				<li><a href="#profiles" class="profiles"><i class="icon-group icon-2x"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="contentWrap transition move-center">
+	</div>
+	<!--<div class="content transition"></div>-->
+	<div class='footer'><i class="icon-list icon-2x menu-btn"></i></div>
+</script>
+
+<!-- main page with menu and content -->
+<script id="news-list-tpl" type="text/x-handlebars-template">
+	<ul class="feed">
+	{{#.}}
+	<li>
+		<a href="#news/{{this.id}}">
+			<div class="media">
+				<i class="{{this.type}} pull-left"></i>
+				<div class="media-body"> 
+					<h1>{{this.title}} <small>{{this.date}}</small></h1>
+					{{#if this.description}}
+						{{{this.description}}}
+					{{/if}}
+				</div>
+			</div>
+		</a>
+	</li>
+	{{/.}}
+	</ul>
+</script>
+
+<script id="news-item-tpl" type="text/x-handlebars-template">
+	<div class="header">
+		<a href="#" class="btn pull-left"><i class="icon-backward"></i></a>
+    <div class="title">
+    	<h1>News & Events</h1>
+    </div>
+    <!--<a href="/" class="btn pull-right"><i class="icon-home"></i></a>-->
+	</div>
+	
+	<div class="text">
+		<i class="{{this.type}} pull-left icon-3x"></i> 
+		<h1>{{this.title}}
+		<small>{{this.date}}</small>
+		</h1><br />
+		{{{this.content}}}
+	</div>
+</script>
+
+<!-- links -->
+<script id="links-tpl" type="text/x-handlebars-template">
+	<div class="header">
+		<a href="#" class="btn pull-left"><i class="icon-backward"></i></a>
+    <div class="title">
+    	<h1>Links</h1>
+    </div>
+	</div>
+	<div class="text">
+		{{#.}}
+			<p><a href="#links" onclick="window.open('{{this.url}}', '_system');">{{this.name}}</a><br />
+				{{{this.description}}}</p>
+		{{/.}}
+	</div>
+</script>
+
+<!-- Location -->
+<script id="locations-tpl" type="text/x-handlebars-template">
+	<div class="header">
+		<a href="#" class="btn pull-left"><i class="icon-backward"></i></a>
+		<div class="title">
+    		<h1>Locations</h1>
+		</div>
+	</div>
+	<div id="geoLocation"></div>
+
+</script>
+
+<!-- In-App Browser -->
+<script id="browser-tpl" type="text/x-handlebars-template">
+	<div class="header">
+		<a href="#" class="btn pull-left"><i class="icon-backward"></i></a>
+		<div class="title">
+    		<h1>Browser</h1>
+		</div>
+	</div>
+
+</script>
+
+<script src="phonegap.js"></script>
+
+<script src="lib/jquery-1.8.2.min.js"></script>
+<!--<script src="lib/jquery.jsonp.js"></script>-->
+<!--<script src="cordova.js"></script>-->
+<script src="lib/handlebars.js"></script>
+<script src="lib/iscroll.js"></script>
+
+<!-- <script src="themes/default/bootstrapswitch/js/bootstrapswitch.js"></script> -->
+
+<script src="js/storage/ls-store.js"></script>
+    
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places"></script>  -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+<!--<script src="js/menu.js"></script>-->
+<script src="js/UserLogin.js"></script>
+<script src="js/UserProfile.js"></script>
+<script src="js/UserRegister.js"></script>
+<script src="js/Overview.js"></script>
+<script src="js/News.js"></script>
+<script src="js/Links.js"></script>
+<script src="js/Locations.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

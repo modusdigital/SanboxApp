@@ -1,0 +1,707 @@
+/* Jimbo's config file for Bootstrap test */
+// ---------
+
+// Colors
+@black: #000;
+@grayDarker: #222;
+@grayDark: #333;
+@gray: #555;
+@grayLight: #999;
+@grayLighter: #eee;
+
+
+@white: #fff;
+@blue: #049cdb;
+@blueDark: #0064cd;
+@green: #46a546;
+@red: #9d261d;
+@yellow: #ffc40d;
+@orange: #f89406;
+@pink: #c3325f;
+@purple: #7a43b6;
+
+
+// Brand Colors
+@mainBrandColor: #00aedd;
+@secondBrandColor: #34495e;
+@thirdBrandColor: #333;
+@callToActionColor: #333;
+
+
+// Scaffolding
+@bodyBackground: @white;
+@textColor: @grayDark;
+@linkColor: @mainBrandColor;
+@linkColorHover: darken(@linkColor, 15%);
+@baseBorderRadius: 4px;
+@borderRadiusLarge: 6px;
+@borderRadiusSmall: 3px;
+
+
+// Typography
+@sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@serifFontFamily: Georgia, 'Times New Roman', Times, serif;
+@monoFontFamily: Monaco, Menlo, Consolas, 'Courier New', monospace;
+@baseFontSize: 14px;
+@baseFontFamily: @sansFontFamily;
+@baseLineHeight: 20px;
+@altFontFamily: @serifFontFamily;
+@headingsFontFamily: inherit;
+@headingsFontWeight: bold;
+@headingsColor: @mainBrandColor;
+
+
+// Component Sizing
+@fontSizeLarge: @baseFontSize * 1.25;
+@paddingLarge: 11px 19px;
+@fontSizeSmall: @baseFontSize * 0.85;
+@paddingSmall: 2px 10px;
+@fontSizeMini: @baseFontSize * 0.75;
+@paddingMini: 0 6px;
+
+
+// Buttons
+@btnBackground: @white;
+@btnBackgroundHighlight: darken(@white, 10%);
+@btnBorder: #bbb;
+@btnPrimaryBackground: @linkColor;
+@btnPrimaryBackgroundHighlight: darken(@btnPrimaryBackground, 5%);
+@btnInfoBackground: #5bc0de;
+@btnInfoBackgroundHighlight: #2f96b4;
+@btnSuccessBackground: #62c462;
+@btnSuccessBackgroundHighlight: #51a351;
+@btnWarningBackground: lighten(@orange, 15%);
+@btnWarningBackgroundHighlight: @orange;
+@btnDangerBackground: #ee5f5b;
+@btnDangerBackgroundHighlight: #bd362f;
+@btnInverseBackground: #444;
+@btnInverseBackgroundHighlight: @grayDarker;
+
+
+// Dropdowns
+@dropdownBackground: @white;
+@dropdownBorder: text(0,0,0,.2);
+@dropdownDividerTop: #e5e5e5;
+@dropdownDividerBottom: @white;
+@dropdownLinkColor: @grayDark;
+@dropdownLinkColorHover: @white;
+@dropdownLinkColorActive: @white;
+@dropdownLinkBackgroundActive: @linkColor;
+@dropdownLinkBackgroundHover: @dropdownLinkBackgroundActive;
+
+
+// Forms
+@inputBackground: @white;
+@inputBorder: #ccc;
+@inputBorderRadius: @baseBorderRadius;
+@inputDisabledBackground: @grayLighter;
+@formActionsBackground: #f5f5f5;
+@inputHeight: @baseLineHeight + 10px;
+@horizontalComponentOffset: 180px;
+@placeholderText: @grayLight;
+@hrBorder: @grayLighter;
+@wellBackground: #f5f5f5;
+
+
+// Table
+@tableBackground: transparent;
+@tableBackgroundAccent: #f9f9f9;
+@tableBackgroundHover: #f5f5f5;
+@tableBorder: #ddd;
+
+
+// Navbar
+//@navbarCollapseWidth: 979px;
+@navbarCollapseWidth: 400px;
+@navbarCollapseDesktopWidth: @navbarCollapseWidth + 1;
+@navbarHeight: 80px;
+@navbarBackgroundHighlight: @mainBrandColor;
+@navbarBackground: @mainBrandColor;
+@navbarBorder: darken(@navbarBackground, 12%);
+@navbarText: #fff;
+@navbarLinkColor: #fff;
+@navbarLinkColorHover: @grayDark;
+@navbarLinkColorActive: @gray;
+@navbarLinkBackgroundHover: transparent;
+@navbarLinkBackgroundActive: darken(@navbarBackground, 5%);
+@navbarBrandColor: @white;
+
+
+// Hero Unit
+@heroUnitBackground: @grayLighter;
+@heroUnitHeadingColor: inherit;
+@heroUnitLeadColor: inherit;
+
+
+// Pagination
+@paginationBackground: #fff;
+@paginationBorder: #ddd;
+@paginationActiveBackground: #f5f5f5;
+
+
+// Form States
+@warningText: #c09853;
+@warningBackground: #fcf8e3;
+@warningBorder: darken(spin(@warningBackground, -10), 3%);
+@errorText: #b94a48;
+@errorBackground: #f2dede;
+@errorBorder: darken(spin(@errorBackground, -10), 3%);
+@successText: #468847;
+@successBackground: #dff0d8;
+@successBorder: darken(spin(@successBackground, -10), 5%);
+@infoText: #3a87ad;
+@infoBackground: #d9edf7;
+@infoBorder: darken(spin(@infoBackground, -10), 7%);
+
+
+// toolTip
+@tooltipColor: #fff;
+@tooltipBackground: #000;
+@tooltipArrowWidth: 5px;
+@tooltipArrowColor: @tooltipBackground;
+
+
+// popOver
+@popoverBackground: #fff;
+@popoverArrowWidth: 10px;
+@popoverArrowColor: #fff;
+@popoverTitleBackground: darken(@popoverBackground, 3%);
+@popoverArrowOuterWidth: @popoverArrowWidth + 1;
+@popoverArrowOuterColor: text(0,0,0,.25);
+
+
+// Sprites
+@iconSpritePath: '../twitter-bootstrap/img/glyphicons-halflings.png';
+@iconWhiteSpritePath: '../twitter-bootstrap/img/glyphicons-halflings-white.png';
+
+
+// Private
+@zindexDropdown: 1000;
+@zindexPopover: 1010;
+@zindexTooltip: 1030;
+@zindexFixedNavbar: 1030;
+@zindexModalBackdrop: 1040;
+@zindexModal: 1050;
+@navbarInverseBackground: #111111;
+@navbarInverseBackgroundHighlight: #222222;
+@navbarInverseBorder: #252525;
+@navbarInverseText: @grayLight;
+@navbarInverseLinkColor: @grayLight;
+@navbarInverseLinkColorHover: @white;
+@navbarInverseLinkColorActive: @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover: transparent;
+@navbarInverseLinkBackgroundActive: @navbarInverseBackground;
+@navbarInverseSearchBackground: lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus: @white;
+@navbarInverseSearchBorder: @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor: #ccc;
+@navbarInverseBrandColor: @navbarInverseLinkColor;
+@gridColumns: 12;
+@gridColumnWidth: 60px;
+@gridGutterWidth: 20px;
+@gridRowWidth: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+@gridColumnWidth1200: 70px;
+@gridGutterWidth1200: 30px;
+@gridRowWidth1200: (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+@gridColumnWidth768: 42px;
+@gridGutterWidth768: 20px;
+@gridRowWidth768: (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+@fluidGridColumnWidth: percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth: percentage(@gridGutterWidth/@gridRowWidth);
+@fluidGridColumnWidth1200: percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200: percentage(@gridGutterWidth1200/@gridRowWidth1200);
+@fluidGridColumnWidth768: percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768: percentage(@gridColumnWidth768/@gridRowWidth768);
+
+
+
+@import "../bootstrap/less/bootstrap.less";
+//@import "../../_scripts/bootstrap/less/responsive.less";
+//@import "../bootstrapswitch/less/bootstrapswitch.less";
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	/*
+width: 320px;
+	height: 568px;
+*/
+	/* border: 1px solid #f0f0f0; */
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+.header {
+/*
+	background: @grayLight;
+	-webkit-background-size: 1px 44px;
+	-moz-background-size: 1px 44px;
+	-ms-background-size: 1px 44px;
+	-o-background-size: 1px 44px;
+	background-size: 1px 44px;
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	color: #fff;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	border-bottom: solid 1px @grayLighter;
+*/
+	
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: @gray;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, @grayLight), color-stop(0.05, @grayLight), color-stop(1, @grayDark));
+	background-image: -moz-linear-gradient(top, @grayLight, @grayLight 5%, @grayDark);
+	background-image: -o-linear-gradient(top, @grayLight, @grayLight 5%, @grayDark);
+	padding: 0;
+	color: @white;
+	font-size: 20px;
+	text-align: center;
+	
+	.title {
+		position: absolute;
+		/*width: 100%;*/
+		left: 55px;
+		right: 55px;
+	}
+	
+	h1 {
+		padding: 0;
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		box-flex: 1;
+		color: @white;
+	}
+	
+	.btn {
+		position: relative;
+		/* 		top: 6px; */
+		//padding: 7px 5px;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		margin: 6px;
+		background-color: @grayDark;
+		background-image: none;
+		color: @white;
+		border: 1px solid @grayDarker;
+
+		
+	}
+	
+/*
+	.pull-right {
+		float: right;
+	}
+*/
+	
+}
+	
+.header-button {
+	
+}
+
+.header-button-left {
+	left: 4;
+}
+
+.logo {
+	height: 150px;
+	display: block;
+	outline: 0 none !important;
+	overflow: hidden;
+	margin:0;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-indent:-9999px;
+	background:url('../img/logo.png') no-repeat center center;
+}
+
+.search-bar {
+	background: #ccc;
+	height: 32px;
+	padding-left:6px;
+	padding-right: 6px;
+	padding-top: 6px;
+	margin-bottom: 6px;
+	border-bottom: solid 1px #666;
+}
+
+input[type="search"] {
+	width:100%;
+	border: none;
+	border-radius: 4px;
+	padding: 4px 0px 2px 2px;
+	margin-top: 0px;
+	font-size: 16px;
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 1px #fff;
+	background: #eee;
+	-webkit-appearance:none;
+}
+
+input[type="search"]:focus {
+	outline: none;
+	box-shadow: inset 0 4px 8px rgba(0,0,0,.5), 0 1px #fff;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+li {
+	display: block;
+	border-top: 1px solid #c0c0c0;
+	padding: 10px;
+	padding: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	width: 100%;
+}
+
+li>a {
+	color: @mainBrandColor;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	width: 100%;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-position: -10px 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: 10px 100%;
+	-moz-background-size: 10px 100%;
+	-ms-background-size: 10px 100%;
+	-o-background-size: 10px 100%;
+	background-size: 10px 100%;
+}
+
+li>a * {
+	pointer-events: none;
+}
+
+h1 {
+	font-size: 18px;
+	padding: 20 0 0 0;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: normal;
+	padding: 0px;
+	margin: 0px;
+}
+
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform:translate3d(0,0,0);
+	overflow: hidden;
+}
+
+.loginWrap {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('../patterns/denim.png') repeat;
+}
+ 
+.stage-center {
+	top: 0;
+	left: 0;
+}
+ 
+.stage-left {
+	left: -100%;
+}
+ 
+.stage-right {
+	left: 100%;
+}
+ 
+.transition {
+	-moz-transition-duration: .375s;
+	-webkit-transition-duration: .375s;
+	-o-transition-duration: .375s;
+}
+
+.scroll {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	top: 84px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.feed {
+	h1 {
+		font-size: 18px;
+		line-height: 20px;
+	}
+	h1 small {
+		display: block;
+		font-size: 10px;
+	}
+	
+	[class^="icon-"] {
+		color: @grayLight;
+	}
+	li {
+			background-color: @gray;
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, lighten(@grayLighter, 70)), color-stop(0.05, lighten(@grayLighter, 50)), color-stop(1, @grayLighter));
+			background-image: -moz-linear-gradient(top, lighten(@grayLighter, 70), lighten(@grayLighter, 50) 5%, @grayLighter);
+			background-image: -o-linear-gradient(top, lighten(@grayLighter, 70), lighten(@grayLighter, 50) 5%, @grayLighter);
+	}
+}
+
+.menu-list {
+	z-index: 10;
+	width: 52px;
+	height: 100%;
+}
+
+.menu-list .menu-scroll .menu {
+/* 	background: url('../patterns/denim.png') repeat; */
+}
+
+.content {
+	z-index: 20;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	/*left: 0px;
+	right: 0px;*/
+	width: 100%;
+	background: #f0f0f0;
+	/*padding-bottom: 44px;*/
+}
+
+.contentWrap {
+	top: 0px;
+	bottom: 44px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.text {
+	padding: 10px;
+	margin-top: 45px;
+}
+
+#geoLocation {
+	height: 100%;
+	margin-top: 45px;
+}
+
+.footer {
+	//border-top: 1px solid @grayDark;
+	background: @grayLighter;
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 30;
+	-webkit-box-shadow: 0px -3px 5px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px -3px 5px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px -3px 5px rgba(50, 50, 50, 0.5);
+}
+
+.menu-btn {
+/* 	background: url(../icons/menu.png); */
+	display: block;
+	text-align: center;
+	width: 22px;
+	height: 22px;
+	margin: 10px;
+	padding: 0;
+	border: 0 none;
+}
+
+.iconspace {
+	width: 55px;
+	display: inline;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	width: 60px;
+	height: 100%;
+	border: 0 none;
+
+	li {
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+	}
+	li:last-child {
+		border-bottom: 1px solid #e0e0e0;
+	}
+	li a {
+		display: block;
+		text-align: center;
+		/* width: 22px; */
+		height: 32px;
+		margin: 0 auto;
+		padding: 0;
+		background-size: 22px 22px;
+		color: #ffffff;
+	}
+	
+/*
+	li a.profile {
+		background: url(../icons/profile.png);
+	}
+	li a.facebook {
+		background: url(../icons/facebook.png);
+	}
+	li a.twitter {
+		background: url(../icons/twitter.png);
+	}
+	li a.youtube {
+		background: url(../icons/youtube.png);
+	}
+	li a.links {
+		background: url(../icons/link.png);
+	}
+	li a.maps {
+		background: url(../icons/maps.png);
+	}
+	li a.profiles {
+		background: url(../icons/profiles.png);
+	}
+*/
+
+}
+
+
+.menu-scroll {
+	/*overflow: auto;*/
+	/*-webkit-overflow-scrolling: touch;
+	position: absolute;*/
+	/*top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;*/
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	width: 60px;
+	overflow: auto;
+}
+
+.menu-scroll .menu {
+	position: absolute;
+	z-index: 1;
+	/*-webkit-touch-callout: none;*/
+	/*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+	/*width: 100%;*/
+	padding: 0;
+	//background: url('../patterns/honey_im_subtle.png') repeat;
+	background: @gray;
+	box-shadow: 14px 0px 8px 10px rgba(119, 119, 119, 0.75);
+	-moz-box-shadow: 14px 0px 8px 10px rgba(119, 119, 119, 0.75);
+	-webkit-box-shadow: 14px 0px 8px 10px rgba(119, 119, 119, 0.75);
+
+}
+
+.form {
+	padding: 20px 20px;
+	text-align: center;
+	.checkbox input[type="checkbox"] {
+		margin-left: 0px;
+		text-align: left;
+		margin-right: 10px;
+	}
+}
+/*
+.form label {
+	display: block;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.form input {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+}
+*/
+label.checkbox {
+	color: @white;
+	width: 247px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.btn-width {
+	width: 247px;
+	margin-bottom: 10px;
+}
+
+.move-left {
+	left: 60px;
+	right: -60px;
+}
+.move-center {
+	left: 0px;
+	right: 0px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+
+	.logo {
+		background:url('../img/logo@2x.png') no-repeat center;
+		background-size: 100px 100px;
+		width: 100%;
+		
+	}
+
+}
