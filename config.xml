@@ -5,10 +5,10 @@
 				versionCode = "10"
 				version     = "1.0.1">
 
-	<name>UEL App</name>
+	<name>SandboxApp Modus</name>
 
 	<description>
-		University of East London Finance application
+		Modus Testing App
 	</description>
 
 	<author href="http://www.modusdigital.co.uk/" email="apps@modusdigital.co.uk">
